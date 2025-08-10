@@ -1,0 +1,30 @@
+.coming-soon-title {
+    color: #000000;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 100px;
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+.coming-soon {
+    padding: 50px 0;
+}
+
+.coming-soon-image img {
+    max-width: 500px;
+}
+
+.coming-soon-image {
+    text-align: center;
+}
+@media(max-width: 767px){
+    .coming-soon-title {
+        font-size: 28px;
+        line-height: 32px;
+        margin: 0 0 21px;
+    }
+    .coming-soon-image img {
+        max-width: 287px;
+    }
+}

@@ -1,0 +1,667 @@
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    width: 100%;
+}
+.nav-button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+#month-year {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    color: #FF3B30;
+}
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.days-header div {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #3C3C4366;
+}
+.days-header, .days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.days-header div, .day {
+    width: 14.28%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.day {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    color: #FF3B30;
+}
+.selected-date {
+    color: #236B0A;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+#next-button {
+    border: none;
+    background: #EC221F;
+    padding: 12px 16px 12px 16px;
+    border-radius: 6px;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 400px;
+    width: 100%;
+}
+.next-btns span {
+    border: none;
+    background: #EC221F;
+    padding: 12px 16px 12px 16px;
+    border-radius: 6px;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 400px;
+    width: 100%;
+}
+.next-btns {
+    text-align: center;
+    width: 100%;
+}
+.date-main-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 50px;
+}
+.calendar-date-picer {
+    box-shadow: 0px 10px 60px 0px #0000001A;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 32px;
+}
+.calender-boxes {
+    padding: 50px 0;
+}
+.month-year-slide-btns {
+    max-width: 80px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.not-show span.day-dates {
+    background: #FF3B3033;
+    color: white;
+    border-radius: 50%;
+}
+.day.selected .day-dates {
+    color: white;
+    border-radius: 50%;
+    background: #FF3B30;
+}
+span.day-dates {
+    max-width: 48px;
+    width: 100%;
+    display: flex;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 400px){
+    .calendar-date-picer {
+        padding: 6px;
+    }
+    span.day-dates {
+        max-width: 32px;
+        height: 32px;
+    }
+    .day {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.3799999952316284px;
+    }
+    .selected-date {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 20px 0;
+    }
+    .next-btns span {
+          font-size: 18px;
+        line-height: 22px;
+    }
+    #next-button {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .days-header div {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    #month-year {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .month-year-slide-btns {
+        max-width: 64px;
+    }
+    .nav-button img {
+        max-width: 26px;
+        height: 26px;
+    }
+    .date-main-title {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+.date-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.date-item {
+    width: 140px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #EC221F;
+    background: #ffffff;
+}
+.date-item .day {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+.date-item.selected {
+    color: white;
+    background: #EC221F;
+}
+.date-item.selected span.day {
+    color: #ffffff;
+}
+.slider-container .nav-button {
+    display: none;
+}
+.date-item .day {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+h2.book-cricket-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book-cricket-call-btn {
+    text-align: center;
+}
+
+.book-cricket-call-btn {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.time-play-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    margin: 60px 0 30px 0;
+    color: #000000;
+}
+.time-play-boxes .table {
+    width: 100%;
+    position: relative;
+}
+.time-play-boxes .header, .time-play-boxes .row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.time-play-boxes .column, .time-play-boxes .cell {
+    padding: 0 15px;
+}
+.time-play-boxes .header .column {
+    width: 33.33%;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #EC221F;
+}
+.time-play-boxes .cell {
+    width: 33.33%;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.time-play-boxes .available span {
+    padding: 12px 10px 12px 10px;
+    border-radius: 6px;
+    border: 1.5px solid #236B0A80;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: #236B0A;
+}
+.time-play-boxes .booked span {
+    padding: 12px 10px 12px 10px;
+    border-radius: 6px;
+    background: #FCE4E4;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: #C10F0F;
+}
+.time-play-boxes .see-all {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    background: #EC221F;
+    padding: 10px 10px 10px 16px;
+    border-radius: 8px;
+    color: #ffffff;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.see-all-btns {
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+.time-play-boxes .header .column {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 0;
+}
+.time-play-boxes .header .column:nth-child(1) {
+    text-align: left;
+}
+
+.see-all img {
+    max-width: 20px;
+    margin-left: 10px;
+}
+.table.after-hide:after {
+    display: none;
+}
+.table.after-hide + .see-all-btns {
+    display: none;
+}
+.calender-box-bottom-inner {
+    border-top: 1px solid #00000029;
+    background: #fffffff0;
+    padding: 24px 48px 24px 48px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.next-button {
+    background: #EC221F;
+    padding: 12px 80px 12px 80px;
+    border-radius: 6px;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 24px;
+    text-align: center;
+}
+.calender-select-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.date-seletced-bottom span {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #EC221F;
+    margin-top: 6px;
+}
+.date-seletced-bottom {
+    display: flex;
+    align-items: flex-start;
+}
+.select-time {
+    padding: 0 30px 0 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.select-ground {
+    padding: 0 30px 0 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+@media(max-width: 660px){
+    .time-play-boxes .header .column {
+        font-size: 13px;
+        line-height: 16px;
+        width: 22%;
+        padding: 15px 3px;
+    }
+    .time-play-boxes .cell {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 0 3px;
+        width: 22%;
+    }
+    h2.book-cricket-title {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    .time-play-title {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 40px 0 20px 0;
+    }
+    .time-play-boxes .cell.time {
+        width: 34%;
+    }
+    .time-play-boxes .header .column:nth-child(1) {
+        width: 34%;
+    }
+    .time-play-boxes .available span {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .time-play-boxes .booked span {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .time-play-boxes .cell span {
+        display: block;
+        white-space: nowrap;
+    }
+    .time-play-boxes .header, .time-play-boxes .row {
+        margin: 0 -3px;
+    }
+    .time-play-boxes .cell.time span {
+        letter-spacing: -0.5px;
+    }
+    .time-play-boxes .see-all {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .time-play-boxes .table:after {
+        height: 80px;
+    }
+    .date-item {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .calender-select-boxes {
+        flex-direction: column-reverse;
+    }
+    
+    button.next-button {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: center;
+        margin-bottom: 11px;
+    }
+    
+    .date-seletced-bottom {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .select-ground,
+    .select-time {
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        padding: 0;
+    }
+    .select-time {
+        margin: 0 0 16px;
+    }
+    .date-seletced-bottom span {
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+    }
+    .next-button-main {
+        display: flex;
+        margin-bottom: 10px;
+    }
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 15px;
+}
+.form-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #000000;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgb(0 0 0 / 50%);
+}
+.submit-button {
+    background-color: #EC221F;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+    padding: 12px 20px 12px 24px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+}
+.submit-button:hover {
+    background-color: #cc0000;
+}
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+.form-row .form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+.form-row .form-group:last-child {
+    margin-right: 0;
+}
+.third-step-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.third-step-img {
+    width: 50%;
+    padding: 0 15px;
+}
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #000000;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+.calender-boxes .container {
+    max-width: 1030px;
+}
+.submit-btns {
+    text-align: center;
+    margin: 40px 0 0;
+}
+button.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.submit-button img {
+    margin-left: 10px;
+}
+label.selected-time-form {
+    display: none;
+}
+h2.time-slot-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    margin: 0 0 35px 0;
+}
+.time-slot-title span {
+    color: #EC221F;
+}
+.time-play-boxes.popular-shorts {
+    padding: 45px 0;
+}
+@media(max-width: 767px){
+    .form-title {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .third-step-img {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .form-container {
+        width: 100%;
+    }
+    .form-group label {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .form-group input {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .form-row {
+        display: none;
+    }
+    label.selected-time-form {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #EC221F;
+    }
+    .submit-btns {
+        margin: 20px 0 0 0;
+    }
+    button.submit-button {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    h2.time-slot-title {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+    }
+    .third-step-row {
+       flex-direction: column-reverse;
+    }
+}
+
+
+input[type="radio"], 
+input[type="checkbox"] {
+    display: none;
+}
+
+.time-play-boxes input:checked + .available span {
+    background: #236b0a;
+    color: #ffffff;
+}
+.time-play-boxes label.cell.booked {
+    pointer-events: none;
+    cursor: not-allowed;
+}.nav-button.not-clicks {
+    pointer-events: none;
+    cursor: not-allowed;
+}
